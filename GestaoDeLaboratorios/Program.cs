@@ -14,7 +14,7 @@ namespace GestaoDeLaboratorios
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
-            builder.Services.AddDbContext<InfnetDbContext>(option =>
+             builder.Services.AddDbContext<InfnetDbContext>(option =>
             {
                 option.UseSqlite(builder.Configuration.GetConnectionString("InfnetDbContext"));
             });
@@ -38,9 +38,14 @@ namespace GestaoDeLaboratorios
 
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
+                pattern: "{controller=Computadores}/{action=Index}/{id?}");
 
             app.Run();
         }
     }
 }
+
+
+
+
+
